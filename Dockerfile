@@ -19,7 +19,7 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
     libpq-dev \
     gcc \
     git \
-&& rm -rf /var/lib/apt/lists/*
+ && rm -rf /var/lib/apt/lists/*
 
 # Install Poetry
 RUN curl -sSL https://install.python-poetry.org | python3 -
@@ -28,9 +28,6 @@ RUN curl -sSL https://install.python-poetry.org | python3 -
 WORKDIR $PYSETUP_PATH
 COPY poetry.lock pyproject.toml ./
 RUN poetry install --no-dev
-
-# Install psycopg2
-RUN $VENV_PATH/bin/pip install psycopg2
 
 # Set work directory
 WORKDIR /app

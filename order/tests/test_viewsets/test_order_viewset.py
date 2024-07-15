@@ -28,9 +28,7 @@ class TestOrderViewSet(APITestCase):
         self.client.credentials(HTTP_AUTHORIZATION="Token " + token.key)
 
     def test_order(self):
-        response = self.client.get(
-            reverse("order-list", kwargs={"version": "v1"})
-        )
+        response = self.client.get(reverse("order-list", kwargs={"version": "v1"}))
 
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 
@@ -62,5 +60,5 @@ class TestOrderViewSet(APITestCase):
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
 
         # Get the most recently created order for the user
-        created_order = Order.objects.filter(user=self.user).latest('id')
+        created_order = Order.objects.filter(user=self.user).latest("id")
         self.assertEqual(created_order.product.first().id, product.id)
