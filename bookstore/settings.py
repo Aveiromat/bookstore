@@ -30,7 +30,7 @@ ALLOWED_HOSTS = [
     "localhost",
     "127.0.0.1",
     "ebac-bookstore-api.herokuapp.com",
-    "drsantos20.pythonanywhere.com",
+    "aveiromat.pythonanywhere.com",
 ]
 
 
