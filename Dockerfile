@@ -19,7 +19,7 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
     libpq-dev \
     gcc \
     git \
- && rm -rf /var/lib/apt/lists/*
+&& rm -rf /var/lib/apt/lists/*
 
 # Install Poetry
 RUN curl -sSL https://install.python-poetry.org | python3 -
