@@ -155,4 +155,4 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'https://bookstore-blush-five.vercel.app']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'bookstore-blush-five.vercel.app']
